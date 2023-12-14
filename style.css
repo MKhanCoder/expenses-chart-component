@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700;9..40,800&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+/* ===============for container start============== */
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* margin-top: 10px; */
+    align-items: center;
+    flex-direction: column;
+    /* padding: 10px; */
+    background-color: hsl(27, 66%, 92%);
+    font-family: 'DM Sans', sans-serif;
+}
+/* ===============for container end=============== */
+
+/* ===========chart-expanse======================== */
+.chart-expanse{
+    width: 450px;
+    box-shadow: rgba(0, 0, 0, .1);
+    /* background-color: #fff; */
+}
+/* ===========chart-expanse== end====================== */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    color: hsl(27, 66%, 92%);
+    background-color: hsl(10, 79%, 65%);
+}
+header .my-balance{
+    padding: 10px 0;
+}
+/* ===============for body start============== */
+.body{
+    display: flex;
+    padding:15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color: #fff;
+}
+.week-expanse h3{
+    font-size: 180%;
+    color: hsl(25, 47%, 15%);
+    margin-bottom: 20px;
+  }
+.bar-chart{
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    gap: 20px;
+  }
+.bar-chart .chart-contents{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+.chart-contents .bar{
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 5px;
+    height: 100px;
+    width: 40px;
+    position: relative;
+  }
+  .chart-contents .amount{
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    font-size: 14px;
+    position: absolute;
+    top: -30px; 
+  }
+  .bar:hover .amount{
+    width: auto;
+    height: auto;  
+    background-color: hsl(25, 47%, 15%);
+    color: #fff;
+    padding: 3px;
+    border-radius: 3px;
+    opacity: 1;
+}
+.chart-contents .bar:hover{
+        opacity: .7;
+        cursor: pointer;
+      }
+      .chart-contents:nth-child(3) div.bar{
+        background-color: hsl(186, 34%, 60%);
+      }
+    .chart-contents .day{
+        color: hsl(28, 10%, 53%);
+        font-size: 14px;
+        margin-top: 10px;
+      }
+/* ===============for body end=============== */
+
+/* ===============for footer start============== */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.footer .percent h4{
+    text-align: right;
+    color: hsl(25, 47%, 15%);
+}
+.footer span{
+    color: hsl(28, 10%, 53%);
+    font-size: 14px;
+}
+.footer h1{
+    color: hsl(25, 47%, 15%);
+}
+/* ===============for footer end=============== */
+.container .attribution{
+    color: gray;
+    margin-top:25px;
+    
+}
+.attribution a{
+    text-decoration: none;
+    color: gray;   
+}
+@media (max-width:520px){
+ .expense-chart{
+      width: 380px;  
+    }
+.chart-contents div.bar{    
+      width: 30px;    
+    }
+  }
